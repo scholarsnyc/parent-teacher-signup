@@ -1,3 +1,5 @@
+source :rubygems
+
 gem 'sinatra'
 gem 'dm-validations'
 gem 'dm-timestamps'
