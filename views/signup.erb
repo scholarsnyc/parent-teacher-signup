@@ -1,0 +1,39 @@
+<h1>Appointment Registration</h1>
+<h2><%= @slot.name %></h2>
+<p class='lead'>Grade <%= @slot.grade %><%= @slot.cohort %></p>
+<form id="create_appointment" name="create_appointment" method="post" action="/signup" accept-charset="UTF-8">
+  <input value="<%= @slot.id %>" id="appointment_slot_id" name="appointment[slot_id]" type="hidden" />
+  <p>
+    <label for="appointment_student">Student Name</label>
+    <input placeholder="Student Name" id="appointment_student" name="appointment[student]" type="text" />
+  </p>
+  <p>
+    <label for="appointment_student">Parent Name</label>
+    <input placeholder="Parent Name" id="appointment_parent" name="appointment[parent]" type="text" />
+  </p>
+  <p>
+    <label for="appointment_student">Parent Email</label>
+    <input name="appointment[email]" placeholder="Parent Email" id="appointment_email" type="email" />
+  </p>
+  <p>
+    <label for="appointment_grade">Grade</label>
+    <select id="appointment_grade" name="appointment[grade]">
+    <option value="<%= @slot.grade %>"><%= @slot.grade %></option></select>
+  </p>
+  <p>
+    <label for="appointment_homeroom">Homeroom</label>
+    <select id="appointment_homeroom" name="appointment[homeroom]">
+      <option value="601">601</option>
+      <option value="602">602</option>
+      <option value="603">603</option>
+      <option value="604">604</option>
+      <option value="605">605</option>
+      <option value="606">606</option>
+      <option value="607">607</option>
+      <option value="608">608</option>
+    </select>
+  </p>
+  <p>
+    <input class="btn btn-primary" value="Submit" type="submit" />
+  </p>
+</form>

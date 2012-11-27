@@ -1,0 +1,26 @@
+<h1>Available Appointments</h1>
+<p>Click on the time slot to make a reservation.</p>
+<table class='tablesorter table' id='appointment-list'>
+  <thead>
+    <tr>
+      <th>Grade</th>
+      <th>Cohort</th>
+      <th>Day and Time</th>
+      <th>Appointments Remaining</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @slots.each do |slot| %>
+      <tr<%= 'class="error"' unless slot.remaining > 0 %>>
+        <td><%= slot.grade %></td>
+        <td><%= slot.cohort %></td>
+        <% if slot.remaining > 0 %>
+          <td><a href="/signup/<%= slot.id %>"><%= slot.name %></a></td>
+        <% else %>
+          <td><%= slot.name %> (Full)</td>
+        <% end %>
+        <td><%= slot.remaining %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
