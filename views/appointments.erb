@@ -1,6 +1,16 @@
 <h1>Scheduled Appointments</h1>
+<p class="lead"><%= @appointments.count %> appointments have been scheduled.</p>
 
 <table class="table tablesorter">
+  <thead>
+    <tr>
+      <th>Grade</th>
+      <th>Homeroom</th>
+      <th>Student</th>
+      <th>Parent</th>
+      <th>Appointment Slot</th>
+    </tr>
+  </thead>
   <tbody>
   <% @appointments.each do |appointment| %>
     <tr>
