@@ -23,14 +23,9 @@
   <p>
     <label for="appointment_homeroom">Homeroom</label>
     <select id="appointment_homeroom" name="appointment[homeroom]">
-      <option value="601">601</option>
-      <option value="602">602</option>
-      <option value="603">603</option>
-      <option value="604">604</option>
-      <option value="605">605</option>
-      <option value="606">606</option>
-      <option value="607">607</option>
-      <option value="608">608</option>
+      <% { 6 => [601, 602, 603, 604, 605, 606, 607, 608], 7 => [701, 702, 703, 704, 705, 706, 707, 708], 8 => [801, 802, 803, 804, 805, 806], 9 => [901, 902, 903, 904], 10 => [101, 102, 103, 104], 11 => [111, 112, 113, 114], 12 => [121, 122, 123] }[@slot.grade].each do |homeroom| %>
+        <option value="<%= homeroom %>"><%= homeroom %></option>
+      <% end %>
     </select>
   </p>
   <p>
