@@ -1,0 +1,15 @@
+<h1>Scheduled Appointments</h1>
+
+<table class="table tablesorter">
+  <tbody>
+  <% @appointments.each do |appointment| %>
+    <tr>
+      <td><%= appointment.grade %></td>
+      <td><%= appointment.homeroom %></td>
+      <td><%= appointment.student %></td>
+      <td><%= appointment.parent %></td>
+      <td><%= appointment.slot.name %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

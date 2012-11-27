@@ -22,3 +22,8 @@ post '/signup' do
     slot_id: params[:appointment][:slot_id])
   erb :confirmation
 end
+
+get '/appointments' do
+  @appointments = Appointment.all
+  erb :appointments
+end
