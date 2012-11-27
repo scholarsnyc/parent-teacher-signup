@@ -1,12 +1,7 @@
 source :rubygems
 
 gem 'sinatra'
-gem 'dm-validations'
-gem 'dm-timestamps'
-gem 'dm-migrations'
-gem 'dm-constraints'
-gem 'dm-aggregates'
-gem 'dm-core'
+gem 'data_mapper'
 
 group :production do
  gem 'pg'
