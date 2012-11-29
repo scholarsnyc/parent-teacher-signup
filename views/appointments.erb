@@ -1,12 +1,14 @@
 <h1>Scheduled Appointments</h1>
 <p class="lead"><%= @appointments.count %> appointments have been scheduled.</p>
 
+<h2>Grades</h2>
 <div class="btn-group">
 <% 6.upto(12).each do |grade| %>
-  <a href="/appointments/<%= grade  %>" class="btn"><%= grade  %></a>
+  <a href="/appointments/grade/<%= grade  %>" class="btn"><%= grade  %></a>
 <% end %>
 </div>
 
+<h2>Appointments</h2>
 <table class="table tablesorter" id="scheduled-appointments">
   <thead>
     <tr>
