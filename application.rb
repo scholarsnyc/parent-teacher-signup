@@ -27,3 +27,14 @@ get '/appointments' do
   @appointments = Appointment.all
   erb :appointments
 end
+
+get '/appointments/grade/:grade' do
+  @appointments = Appointment.all(grade: params[:grade])
+  erb :appointments
+end
+
+get '/appointments/homeroom/:homeroom' do
+  @appointments = Appointment.all(homeroom: params[:homeroom])
+  erb :appointments
+end
+
