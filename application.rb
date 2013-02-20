@@ -38,3 +38,8 @@ get '/appointments/homeroom/:homeroom' do
   erb :appointments
 end
 
+put '/rebuild' do
+  Appointment.all.destroy!
+  Slot.all.destroy!
+  Appointment.populate!
+end
