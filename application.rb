@@ -41,5 +41,5 @@ end
 put '/rebuild' do
   Appointment.all.destroy!
   Slot.all.destroy!
-  Appointment.populate!
+  Slot.populate!
 end
