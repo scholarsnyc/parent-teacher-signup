@@ -1,5 +1,7 @@
 *.gem
 *.rbc
+.DS_Store
+*.un~
 .bundle
 .config
 coverage
